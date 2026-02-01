@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valentine 💜</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <main class="wrap">
+      <div class="pet-wrap" aria-hidden="true">
+        <!-- Inline SVG kitty (offline friendly) -->
+        <svg
+          class="pet"
+          viewBox="0 0 260 260"
+          role="img"
+          aria-label="Cute kitty"
+        >
+          <defs>
+            <radialGradient id="g" cx="40%" cy="30%" r="70%">
+              <stop offset="0%" stop-color="#ffffff" stop-opacity="0.18" />
+              <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+            </radialGradient>
+          </defs>
+
+          <!-- glow -->
+          <circle cx="130" cy="140" r="95" fill="url(#g)" />
+          <!-- ears -->
+          <path d="M80 78 L55 40 L92 55 Z" fill="rgba(245,241,255,.92)" />
+          <path d="M180 78 L205 40 L168 55 Z" fill="rgba(245,241,255,.92)" />
+          <!-- head -->
+          <circle cx="130" cy="120" r="78" fill="rgba(245,241,255,.92)" />
+          <!-- cheeks -->
+          <circle cx="88" cy="132" r="16" fill="rgba(255,79,216,.25)" />
+          <circle cx="172" cy="132" r="16" fill="rgba(255,79,216,.25)" />
+          <!-- eyes -->
+          <ellipse cx="104" cy="118" rx="10" ry="14" fill="#1b1026" />
+          <ellipse cx="156" cy="118" rx="10" ry="14" fill="#1b1026" />
+          <circle cx="101" cy="113" r="3" fill="rgba(255,255,255,.9)" />
+          <circle cx="153" cy="113" r="3" fill="rgba(255,255,255,.9)" />
+          <!-- nose -->
+          <path
+            d="M130 135 L121 145 Q130 152 139 145 Z"
+            fill="rgba(255,79,216,.85)"
+          />
+          <!-- mouth -->
+          <path
+            d="M130 149 Q120 158 112 154"
+            stroke="#1b1026"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M130 149 Q140 158 148 154"
+            stroke="#1b1026"
+            stroke-width="4"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- whiskers -->
+          <path
+            d="M55 140 L95 148"
+            stroke="rgba(27,16,38,.55)"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M55 158 L97 156"
+            stroke="rgba(27,16,38,.55)"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M205 140 L165 148"
+            stroke="rgba(27,16,38,.55)"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+          <path
+            d="M205 158 L163 156"
+            stroke="rgba(27,16,38,.55)"
+            stroke-width="4"
+            stroke-linecap="round"
+          />
+        </svg>
+      </div>
+
+      <h1 class="question">Will you spend Valentine’s Day with me?</h1>
+
+      <div class="buttons">
+        <button id="yesBtn" class="btn yes">YES</button>
+        <button id="noBtn" class="btn no">NO</button>
+      </div>
+
+      <p id="hint" class="hint" aria-live="polite"></p>
+      <p id="result" class="result" aria-live="polite"></p>
+
+      <!-- Heart overlay (on YES) -->
+      <div id="loveOverlay" class="love-overlay" aria-hidden="true">
+        <div class="big-heart"></div>
+      </div>
+    </main>
+
+    <!-- FX layer: hearts + confetti -->
+    <div id="fxLayer" class="fx-layer" aria-hidden="true"></div>
+    <footer class="author">
+      made with 💜 by
+      <a href="https://radektichy.cz" target="_blank" rel="noopener noreferrer">
+        radektichy.cz
+      </a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
