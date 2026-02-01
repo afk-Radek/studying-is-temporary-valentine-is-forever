@@ -346,3 +346,36 @@ body {
     animation: none;
   }
 }
+/* contact after YES */
+.contact {
+  display: none;
+  margin-top: 14px;
+  text-align: center;
+}
+
+.contact.show {
+  display: block;
+}
+
+.contact-text {
+  margin: 0;
+  font-weight: 800;
+  color: rgba(245, 241, 255, 0.8);
+}
+
+.contact-phone {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 22px;
+  font-weight: 950;
+  letter-spacing: 0.6px;
+  color: #ff4fd8;
+  text-decoration: none;
+  text-shadow:
+    0 0 12px rgba(255, 79, 216, 0.35),
+    0 0 18px rgba(168, 85, 247, 0.35);
+}
+
+.contact-phone:hover {
+  color: #a855f7;
+}
