@@ -5,6 +5,7 @@ const hint = document.getElementById("hint");
 const fxLayer = document.getElementById("fxLayer");
 const overlay = document.getElementById("loveOverlay");
 const pet = document.querySelector(".pet");
+const contact = document.getElementById("contact");
 
 let noClicks = 0;
 
@@ -78,6 +79,9 @@ yesBtn.addEventListener("click", () => {
 
   setTimeout(() => overlay.classList.remove("on"), 1400);
   setTimeout(() => (noBtn.style.display = "none"), 200);
+  setTimeout(() => {
+    contact.classList.add("show");
+  }, 700);
 });
 
 // NO (messages show ONLY on click/tap)
