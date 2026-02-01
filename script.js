@@ -5,6 +5,7 @@ const hint = document.getElementById("hint");
 const fxLayer = document.getElementById("fxLayer");
 const overlay = document.getElementById("loveOverlay");
 const pet = document.querySelector(".pet");
+const petWrap = document.querySelector(".pet-wrap");
 const contact = document.getElementById("contact");
 
 let noClicks = 0;
@@ -33,7 +34,7 @@ function spawnHearts(count = 22) {
     el.style.animationDelay = `${rand(0, 120)}ms`;
 
     fxLayer.appendChild(el);
-    setTimeout(() => el.remove(), dur + 500);
+    setTimeout(() => el.remove(), dur + 600);
   }
 }
 
@@ -52,7 +53,7 @@ function spawnConfetti(count = 44) {
     el.style.animationDelay = `${rand(0, 150)}ms`;
 
     fxLayer.appendChild(el);
-    setTimeout(() => el.remove(), dur + 500);
+    setTimeout(() => el.remove(), dur + 700);
   }
 }
 
@@ -72,13 +73,19 @@ yesBtn.addEventListener("click", () => {
   result.textContent = "YAAAY 💜🥹";
   hint.textContent = "";
 
+  // kitty disappears
+  petWrap.classList.add("hide");
+
+  // heart overlay stays
   overlay.classList.add("on");
+
   petBounce();
   spawnHearts();
   spawnConfetti();
 
-  setTimeout(() => overlay.classList.remove("on"), 1400);
   setTimeout(() => (noBtn.style.display = "none"), 200);
+
+  // show contact after a short delay
   setTimeout(() => {
     contact.classList.add("show");
   }, 700);
