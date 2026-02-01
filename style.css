@@ -296,19 +296,26 @@ body {
 .author {
   position: fixed;
   bottom: 12px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+
   font-size: 13px;
   font-weight: 700;
   color: rgba(245, 241, 255, 0.6);
   letter-spacing: 0.3px;
   z-index: 10;
+  text-align: center;
+  pointer-events: auto;
 }
 
 .author a {
-  color: rgba(168, 85, 247, 0.85);
+  color: rgba(168, 85, 247, 0.9);
   text-decoration: none;
-  margin-left: 4px;
+  white-space: nowrap;
   transition:
     color 0.15s ease,
     text-shadow 0.15s ease;
